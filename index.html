@@ -1,487 +1,490 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Belikopi - Menu dan Resep</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-    body {
-      font-family: 'Roboto Mono', monospace;
-    }
-    .underline-custom {
-      text-decoration-line: underline;
-      text-underline-offset: 3px;
-      text-decoration-thickness: 1.5px;
-    }
-  </style>
-</head>
-<body class="bg-white text-black p-4">
-  <!-- Search Bar -->
-  <div class="mb-6">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Cari resep berdasarkan kode (contoh: KSGA)"
-      class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-    />
-    <button
-      id="searchButton"
-      class="mt-2 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-300"
-    >
-      Cari Resep
-    </button>
-  </div>
-
-  <!-- Main Content -->
-  <main class="max-w-3xl mx-auto border border-black">
-    <!-- Liter/Botol Section -->
-    <section class="mb-8">
-      <h1 class="text-center font-bold text-sm mb-1">BELIKOPI,</h1>
-      <h2 class="text-center font-bold text-xs underline mb-4">LITER / BOTOL</h2>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ KOPI SUSU GULA AREN (KSGA)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5 mb-1">
-          <li>Gula Aren <span class="float-right">100 gr</span></li>
-          <li>SKM <span class="float-right">90 gr</span></li>
-          <li>Air <span class="float-right">160 gr</span></li>
-          <li>Espresso <span class="float-right">220 gr</span></li>
-          <li>Susu UHT <span class="float-right">400 gr</span></li>
-        </ul>
-        <p class="font-semibold text-xs leading-tight">
-          NB: KOCOK SEMUA BAHAN HINGGA TERCAMPUR RATA > WHISK > LALU MASUKAN UHT
-        </p>
-      </article>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ KOPI HITAM (KH)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5 mb-1">
-          <li>Air <span class="float-right">600 gr</span></li>
-          <li>Gula <span class="float-right">200 gr</span></li>
-          <li>Espresso <span class="float-right">200 gr</span></li>
-        </ul>
-        <p class="font-semibold text-xs leading-tight">
-          NB: KOCOK SEMUA BAHAN HINGGA TERCAMPUR RATA
-        </p>
-      </article>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ CHOCOLATE (C)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5 mb-1">
-          <li>Powder Chocolate <span class="float-right">70 gr</span></li>
-          <li>SKM <span class="float-right">100 gr</span></li>
-          <li>Air Panas <span class="float-right">100 gr</span></li>
-          <li>Susu UHT <span class="float-right">730 gr</span></li>
-        </ul>
-        <p class="font-semibold text-xs leading-tight">
-          NB: KOCOK SEMUA BAHAN HINGGA TERCAMPUR RATA > WHISK > LALU MASUKAN UHT
-        </p>
-      </article>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ CAPUCCINO (CA)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5">
-          <li>Gula cair <span class="float-right">100 Gr</span></li>
-          <li>SKM <span class="float-right">90 Gr</span></li>
-          <li>AIR <span class="float-right">160 Gr</span></li>
-          <li>Espresso <span class="float-right">220 Gr</span></li>
-          <li>UHT <span class="float-right">400 Gr</span></li>
-        </ul>
-      </article>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ PETIK MANGGA (PM)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5">
-          <li>Jus Mangga <span class="float-right">150 gr</span></li>
-          <li>Skm <span class="float-right">75 gr</span></li>
-          <li>Susu UHT <span class="float-right">700 gr</span></li>
-          <li>Rainbow Jelly <span class="float-right">100 gr</span></li>
-        </ul>
-      </article>
-      <article>
-        <p class="font-semibold text-xs mb-1">➢ CARAMEL MACHIATO (CM)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5">
-          <li>Sirup Caramel <span class="float-right">70 gr</span></li>
-          <li>SKM <span class="float-right">90 gr</span></li>
-          <li>Air <span class="float-right">160 gr</span></li>
-          <li>Kopi Espresso <span class="float-right">220 gr</span></li>
-          <li>UHT <span class="float-right">400 gr</span></li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- Hot Drinks Section -->
-    <section class="mb-8">
-      <h1 class="text-center font-bold text-sm mb-1">BELIKOPI,</h1>
-      <h2 class="text-center font-bold text-sm underline mb-4">PEMBUATAN HOT</h2>
-      <article class="mb-4">
-        <h3 class="font-semibold text-sm mb-2 flex items-center gap-2">
-          <i class="fas fa-caret-right text-gray-800"></i>
-          HOT STRAWBERRY (S)
-        </h3>
-        <ul class="list-disc list-inside space-y-1 text-xs">
-          <li class="flex justify-between"><span>SKM</span><span>20 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Powder</span><span>1 Pcs</span></li>
-          <li class="flex justify-between"><span>Air Panas</span><span>70 gr</span></li>
-        </ul>
-      </article>
-      <article class="mb-4">
-        <h3 class="font-semibold text-sm mb-2 flex items-center gap-2">
-          <i class="fas fa-caret-right text-gray-800"></i>
-          HOT COOKIES AND CREAM (CC)
-        </h3>
-        <ul class="list-disc list-inside space-y-1 text-xs">
-          <li class="flex justify-between"><span>SKM</span><span>20 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Powder</span><span>1 Pcs</span></li>
-          <li class="flex justify-between"><span>Air Panas</span><span>70 gr</span></li>
-          <li class="flex justify-between"><span>Bubuk Oreo</span><span>5 gr</span></li>
-        </ul>
-      </article>
-      <article>
-        <h3 class="font-semibold text-sm mb-2 flex items-center gap-2">
-          <i class="fas fa-caret-right text-gray-800"></i>
-          HOT KSGA
-        </h3>
-        <ul class="list-disc list-inside space-y-1 text-xs">
-          <li class="flex justify-between"><span>Gula Aren</span><span>30 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Kopi Espresso</span><span>30 gr</span></li>
-          <li class="flex justify-between"><span>Air Panas</span><span>50 gr</span></li>
-          <li class="flex justify-between"><span>Creamer</span><span>10 gr</span></li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- Ice and SOP Upsize Section -->
-    <section class="mb-8">
-      <h1 class="text-center font-bold text-sm underline mb-3">BELIKOPI.</h1>
-      <h2 class="text-center font-bold text-sm underline mb-4">PEMBUATAN ICE</h2>
-      <article class="mb-4">
-        <h3 class="font-bold text-xs mb-2">➢ ICE PETIK MANGGA (PM)</h3>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li class="flex justify-between"><span>Jus Mangga</span><span>30 gr</span></li>
-          <li class="flex justify-between"><span>SKM</span><span>15 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Es Batu (Secukupnya)</span><span></span></li>
-          <li class="flex justify-between"><span>Rainbow Jelly</span><span>20 gr</span></li>
-        </ul>
-      </article>
-      <article class="mb-4">
-        <h3 class="font-bold text-xs mb-2">➢ ICE COOKIES AND CREAM (CC)</h3>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li class="flex justify-between"><span>SKM</span><span>20 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Powder</span><span>1 Pcs</span></li>
-          <li class="flex justify-between"><span>Es Batu (Secukupnya)</span><span></span></li>
-          <li class="flex justify-between"><span>Bubuk Oreo</span><span>5 gr</span></li>
-        </ul>
-      </article>
-      <article>
-        <h3 class="font-bold text-xs mb-2">➢ ICE KACANG HIJAU (K)</h3>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li class="flex justify-between"><span>SKM</span><span>20 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Powder</span><span>1 Pcs</span></li>
-          <li class="flex justify-between"><span>Es Batu (Secukupnya)</span><span></span></li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- Milo Series Section -->
-    <section>
-      <h1 class="text-center font-bold text-sm underline mb-3">BELIKOPI.</h1>
-      <h2 class="text-center font-bold text-sm underline mb-4">SOP MILO SERIES</h2>
-      <article class="mb-3">
-        <h4 class="font-bold text-[13px] mb-1">> MILO MACHIATO (MM)</h4>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li>Millo Powder 15 gr (1 Pcs)</li>
-          <li>SKM <span class="float-right">10 gr</span></li>
-          <li>UHT <span class="float-right">100 gr</span></li>
-          <li>Es Batu (Secukupnya)</li>
-          <li>Machliato <span class="float-right">30 gr</span></li>
-        </ul>
-      </article>
-      <article class="mb-3">
-        <h4 class="font-bold text-[13px] mb-1">> MILO BOBA (MB)</h4>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li>Millo Powder 15 gr (1 Pcs)</li>
-          <li>SKM <span class="float-right">10 gr</span></li>
-          <li>UHT <span class="float-right">100 gr</span></li>
-          <li>Es Batu (Secukupnya)</li>
-          <li>Boba <span class="float-right">30 gr</span></li>
-        </ul>
-      </article>
-      <article>
-        <h4 class="font-bold text-[13px] mb-1">> KOPI MILO (KM)</h4>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li>Millo Powder 15 gr (1 Pcs)</li>
-          <li>SKM <span class="float-right">10 gr</span></li>
-          <li>UHT <span class="float-right">100 gr</span></li>
-          <li>Es Batu (Secukupnya)</li>
-          <li>Kopi Espresso <span class="float-right">30 gr</span></li>
-        </ul>
-      </article>
-    </section>
-  </main>
-
-  <script>
-    // Fungsi pencarian berdasarkan kode minuman
-    document.getElementById("searchButton").addEventListener("click", function () {
-      const query = document.getElementById("searchInput").value.trim().toUpperCase();
-      const articles = document.querySelectorAll("article");
-
-      articles.forEach((article) => {
-        const title = article.querySelector("p, h3, h4");
-        if (title && title.textContent.toUpperCase().includes(query)) {
-          article.style.display = "block";
-        } else {
-          article.style.display = "none";
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'slate-900': '#0f172a',
+                        'slate-800': '#1e293b',
+                        'slate-700': '#334155',
+                        'blue-500': '#3b82f6',
+                        'purple-500': '#a855f7',
+                        'pink-500': '#ec4899',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
         }
-      });
-    });
-  </script>
-</body>
-    </html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Belikopi - Menu dan Resep</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-    body {
-      font-family: 'Roboto Mono', monospace;
-    }
-    .underline-custom {
-      text-decoration-line: underline;
-      text-underline-offset: 3px;
-      text-decoration-thickness: 1.5px;
-    }
-  </style>
-</head>
-<body class="bg-white text-black p-4">
-  <!-- Search Bar -->
-  <div class="mb-6">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Cari resep berdasarkan kode (contoh: KSGA)"
-      class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-    />
-    <button
-      id="searchButton"
-      class="mt-2 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-300"
-    >
-      Cari Resep
-    </button>
-  </div>
-
-  <!-- Main Content -->
-  <main class="max-w-3xl mx-auto border border-black">
-    <!-- Liter/Botol Section -->
-    <section class="mb-8">
-      <h1 class="text-center font-bold text-sm mb-1">BELIKOPI,</h1>
-      <h2 class="text-center font-bold text-xs underline mb-4">LITER / BOTOL</h2>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ KOPI SUSU GULA AREN (KSGA)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5 mb-1">
-          <li>Gula Aren <span class="float-right">100 gr</span></li>
-          <li>SKM <span class="float-right">90 gr</span></li>
-          <li>Air <span class="float-right">160 gr</span></li>
-          <li>Espresso <span class="float-right">220 gr</span></li>
-          <li>Susu UHT <span class="float-right">400 gr</span></li>
-        </ul>
-        <p class="font-semibold text-xs leading-tight">
-          NB: KOCOK SEMUA BAHAN HINGGA TERCAMPUR RATA > WHISK > LALU MASUKAN UHT
-        </p>
-      </article>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ KOPI HITAM (KH)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5 mb-1">
-          <li>Air <span class="float-right">600 gr</span></li>
-          <li>Gula <span class="float-right">200 gr</span></li>
-          <li>Espresso <span class="float-right">200 gr</span></li>
-        </ul>
-        <p class="font-semibold text-xs leading-tight">
-          NB: KOCOK SEMUA BAHAN HINGGA TERCAMPUR RATA
-        </p>
-      </article>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ CHOCOLATE (C)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5 mb-1">
-          <li>Powder Chocolate <span class="float-right">70 gr</span></li>
-          <li>SKM <span class="float-right">100 gr</span></li>
-          <li>Air Panas <span class="float-right">100 gr</span></li>
-          <li>Susu UHT <span class="float-right">730 gr</span></li>
-        </ul>
-        <p class="font-semibold text-xs leading-tight">
-          NB: KOCOK SEMUA BAHAN HINGGA TERCAMPUR RATA > WHISK > LALU MASUKAN UHT
-        </p>
-      </article>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ CAPUCCINO (CA)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5">
-          <li>Gula cair <span class="float-right">100 Gr</span></li>
-          <li>SKM <span class="float-right">90 Gr</span></li>
-          <li>AIR <span class="float-right">160 Gr</span></li>
-          <li>Espresso <span class="float-right">220 Gr</span></li>
-          <li>UHT <span class="float-right">400 Gr</span></li>
-        </ul>
-      </article>
-      <article class="mb-4">
-        <p class="font-semibold text-xs mb-1">➢ PETIK MANGGA (PM)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5">
-          <li>Jus Mangga <span class="float-right">150 gr</span></li>
-          <li>Skm <span class="float-right">75 gr</span></li>
-          <li>Susu UHT <span class="float-right">700 gr</span></li>
-          <li>Rainbow Jelly <span class="float-right">100 gr</span></li>
-        </ul>
-      </article>
-      <article>
-        <p class="font-semibold text-xs mb-1">➢ CARAMEL MACHIATO (CM)</p>
-        <ul class="list-disc list-inside text-xs space-y-0.5">
-          <li>Sirup Caramel <span class="float-right">70 gr</span></li>
-          <li>SKM <span class="float-right">90 gr</span></li>
-          <li>Air <span class="float-right">160 gr</span></li>
-          <li>Kopi Espresso <span class="float-right">220 gr</span></li>
-          <li>UHT <span class="float-right">400 gr</span></li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- Hot Drinks Section -->
-    <section class="mb-8">
-      <h1 class="text-center font-bold text-sm mb-1">BELIKOPI,</h1>
-      <h2 class="text-center font-bold text-sm underline mb-4">PEMBUATAN HOT</h2>
-      <article class="mb-4">
-        <h3 class="font-semibold text-sm mb-2 flex items-center gap-2">
-          <i class="fas fa-caret-right text-gray-800"></i>
-          HOT STRAWBERRY (S)
-        </h3>
-        <ul class="list-disc list-inside space-y-1 text-xs">
-          <li class="flex justify-between"><span>SKM</span><span>20 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Powder</span><span>1 Pcs</span></li>
-          <li class="flex justify-between"><span>Air Panas</span><span>70 gr</span></li>
-        </ul>
-      </article>
-      <article class="mb-4">
-        <h3 class="font-semibold text-sm mb-2 flex items-center gap-2">
-          <i class="fas fa-caret-right text-gray-800"></i>
-          HOT COOKIES AND CREAM (CC)
-        </h3>
-        <ul class="list-disc list-inside space-y-1 text-xs">
-          <li class="flex justify-between"><span>SKM</span><span>20 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Powder</span><span>1 Pcs</span></li>
-          <li class="flex justify-between"><span>Air Panas</span><span>70 gr</span></li>
-          <li class="flex justify-between"><span>Bubuk Oreo</span><span>5 gr</span></li>
-        </ul>
-      </article>
-      <article>
-        <h3 class="font-semibold text-sm mb-2 flex items-center gap-2">
-          <i class="fas fa-caret-right text-gray-800"></i>
-          HOT KSGA
-        </h3>
-        <ul class="list-disc list-inside space-y-1 text-xs">
-          <li class="flex justify-between"><span>Gula Aren</span><span>30 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Kopi Espresso</span><span>30 gr</span></li>
-          <li class="flex justify-between"><span>Air Panas</span><span>50 gr</span></li>
-          <li class="flex justify-between"><span>Creamer</span><span>10 gr</span></li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- Ice and SOP Upsize Section -->
-    <section class="mb-8">
-      <h1 class="text-center font-bold text-sm underline mb-3">BELIKOPI.</h1>
-      <h2 class="text-center font-bold text-sm underline mb-4">PEMBUATAN ICE</h2>
-      <article class="mb-4">
-        <h3 class="font-bold text-xs mb-2">➢ ICE PETIK MANGGA (PM)</h3>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li class="flex justify-between"><span>Jus Mangga</span><span>30 gr</span></li>
-          <li class="flex justify-between"><span>SKM</span><span>15 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Es Batu (Secukupnya)</span><span></span></li>
-          <li class="flex justify-between"><span>Rainbow Jelly</span><span>20 gr</span></li>
-        </ul>
-      </article>
-      <article class="mb-4">
-        <h3 class="font-bold text-xs mb-2">➢ ICE COOKIES AND CREAM (CC)</h3>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li class="flex justify-between"><span>SKM</span><span>20 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Powder</span><span>1 Pcs</span></li>
-          <li class="flex justify-between"><span>Es Batu (Secukupnya)</span><span></span></li>
-          <li class="flex justify-between"><span>Bubuk Oreo</span><span>5 gr</span></li>
-        </ul>
-      </article>
-      <article>
-        <h3 class="font-bold text-xs mb-2">➢ ICE KACANG HIJAU (K)</h3>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li class="flex justify-between"><span>SKM</span><span>20 gr</span></li>
-          <li class="flex justify-between"><span>UHT</span><span>100 gr</span></li>
-          <li class="flex justify-between"><span>Powder</span><span>1 Pcs</span></li>
-          <li class="flex justify-between"><span>Es Batu (Secukupnya)</span><span></span></li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- Milo Series Section -->
-    <section>
-      <h1 class="text-center font-bold text-sm underline mb-3">BELIKOPI.</h1>
-      <h2 class="text-center font-bold text-sm underline mb-4">SOP MILO SERIES</h2>
-      <article class="mb-3">
-        <h4 class="font-bold text-[13px] mb-1">> MILO MACHIATO (MM)</h4>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li>Millo Powder 15 gr (1 Pcs)</li>
-          <li>SKM <span class="float-right">10 gr</span></li>
-          <li>UHT <span class="float-right">100 gr</span></li>
-          <li>Es Batu (Secukupnya)</li>
-          <li>Machliato <span class="float-right">30 gr</span></li>
-        </ul>
-      </article>
-      <article class="mb-3">
-        <h4 class="font-bold text-[13px] mb-1">> MILO BOBA (MB)</h4>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li>Millo Powder 15 gr (1 Pcs)</li>
-          <li>SKM <span class="float-right">10 gr</span></li>
-          <li>UHT <span class="float-right">100 gr</span></li>
-          <li>Es Batu (Secukupnya)</li>
-          <li>Boba <span class="float-right">30 gr</span></li>
-        </ul>
-      </article>
-      <article>
-        <h4 class="font-bold text-[13px] mb-1">> KOPI MILO (KM)</h4>
-        <ul class="list-disc list-inside text-xs leading-tight">
-          <li>Millo Powder 15 gr (1 Pcs)</li>
-          <li>SKM <span class="float-right">10 gr</span></li>
-          <li>UHT <span class="float-right">100 gr</span></li>
-          <li>Es Batu (Secukupnya)</li>
-          <li>Kopi Espresso <span class="float-right">30 gr</span></li>
-        </ul>
-      </article>
-    </section>
-  </main>
-
-  <script>
-    // Fungsi pencarian berdasarkan kode minuman
-    document.getElementById("searchButton").addEventListener("click", function () {
-      const query = document.getElementById("searchInput").value.trim().toUpperCase();
-      const articles = document.querySelectorAll("article");
-
-      articles.forEach((article) => {
-        const title = article.querySelector("p, h3, h4");
-        if (title && title.textContent.toUpperCase().includes(query)) {
-          article.style.display = "block";
-        } else {
-          article.style.display = "none";
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar { -ms-overflow-style: none;  scrollbar-width: none; }
+        
+        /* Custom Utility for glass effect */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
         }
-      });
-    });
-  </script>
+        .glass-card:hover {
+            border-color: rgba(148, 163, 184, 0.3);
+            background: rgba(30, 41, 59, 0.6);
+        }
+        
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .mobile-menu-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.95);
+        }
+        .mobile-menu-visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-white overflow-x-hidden selection:bg-purple-500 selection:text-white">
+
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute top-0 left-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-blue-600/20 rounded-full blur-[80px] md:blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-purple-600/20 rounded-full blur-[80px] md:blur-[100px]"></div>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-slate-900/95 backdrop-blur-xl flex flex-col p-6 mobile-menu-hidden">
+        <div class="flex justify-between items-center mb-8">
+            <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Menu</span>
+            <button id="close-menu-btn" class="p-2 bg-slate-800 rounded-full text-slate-300 hover:text-white hover:bg-slate-700 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        
+        <nav class="flex flex-col gap-4 text-lg">
+            <a href="#dashboard" class="mobile-link flex items-center gap-4 px-4 py-4 rounded-xl hover:bg-slate-800 transition-all border border-transparent hover:border-slate-700">
+                <span class="text-blue-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></span>
+                Dashboard
+            </a>
+            <a href="#tentang" class="mobile-link flex items-center gap-4 px-4 py-4 rounded-xl hover:bg-slate-800 transition-all border border-transparent hover:border-slate-700">
+                <span class="text-purple-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                Tentang Saya
+            </a>
+            <a href="#pendidikan" class="mobile-link flex items-center gap-4 px-4 py-4 rounded-xl hover:bg-slate-800 transition-all border border-transparent hover:border-slate-700">
+                <span class="text-pink-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></span>
+                Pendidikan
+            </a>
+            <a href="#pengalaman" class="mobile-link flex items-center gap-4 px-4 py-4 rounded-xl hover:bg-slate-800 transition-all border border-transparent hover:border-slate-700">
+                <span class="text-green-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+                Pengalaman
+            </a>
+            <a href="#keahlian" class="mobile-link flex items-center gap-4 px-4 py-4 rounded-xl hover:bg-slate-800 transition-all border border-transparent hover:border-slate-700">
+                <span class="text-yellow-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+                Keahlian
+            </a>
+            <a href="#kontak" class="mobile-link flex items-center gap-4 px-4 py-4 rounded-xl hover:bg-slate-800 transition-all border border-transparent hover:border-slate-700">
+                <span class="text-red-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+                Kontak
+            </a>
+        </nav>
+
+        <div class="mt-auto">
+            <a href="#" class="flex items-center gap-3 px-4 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg justify-center font-bold">
+                Download CV
+            </a>
+        </div>
+    </div>
+    <div class="relative z-10 flex h-screen overflow-hidden">
+
+        <aside class="hidden md:flex w-64 flex-col glass-card border-r border-slate-700/30 z-20">
+            <div class="p-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-xl shadow-lg shadow-blue-500/20">P</div>
+                <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Portofolio</span>
+            </div>
+
+            <nav class="flex-1 px-4 py-4 space-y-2 overflow-y-auto no-scrollbar">
+                <a href="#dashboard" class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 group-hover:text-blue-400"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                    <span class="font-medium">Dashboard</span>
+                </a>
+                
+                <a href="#tentang" class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 group-hover:text-purple-400"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span class="font-medium">Tentang Saya</span>
+                </a>
+
+                <a href="#pendidikan" class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 group-hover:text-pink-400"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                    <span class="font-medium">Pendidikan</span>
+                </a>
+
+                <a href="#pengalaman" class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 group-hover:text-green-400"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    <span class="font-medium">Pengalaman</span>
+                </a>
+
+                <a href="#keahlian" class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 group-hover:text-yellow-400"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <span class="font-medium">Keahlian</span>
+                </a>
+
+                <a href="#kontak" class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 group-hover:text-red-400"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span class="font-medium">Kontak</span>
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-slate-700/30">
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all text-sm font-semibold justify-center">
+                    <span>Download CV</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-1 flex flex-col overflow-hidden relative">
+            
+            <div class="md:hidden flex items-center justify-between p-4 glass-card z-40 sticky top-0 border-b border-slate-700/50">
+                <span class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Portofolio</span>
+                <button id="open-menu-btn" class="text-white p-1 rounded-md hover:bg-white/10 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+
+            <div class="flex-1 overflow-y-auto scroll-smooth p-4 md:p-8 space-y-12 md:space-y-16 pb-20">
+
+                <section id="dashboard" class="space-y-6 pt-4">
+                    <div class="glass-card rounded-2xl p-6 md:p-8 relative overflow-hidden border border-slate-700/50">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                        <div class="relative z-10 max-w-2xl">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-4">
+                                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                                Available for Freelance
+                            </div>
+                            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                                Halo, Saya <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 block md:inline">Alex Designer</span>
+                            </h1>
+                            <p class="text-slate-400 text-base md:text-lg mb-6 leading-relaxed">Seorang Full Stack Developer & UI/UX Designer yang berfokus menciptakan pengalaman digital yang sederhana namun berdampak.</p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button class="px-6 py-3 rounded-lg bg-white text-slate-900 font-bold hover:bg-slate-200 transition-all text-center">Lihat Proyek</button>
+                                <button class="px-6 py-3 rounded-lg glass-card text-white hover:bg-white/10 transition-all border border-slate-600 text-center">Hubungi Saya</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="glass-card p-6 rounded-xl border-l-4 border-blue-500">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-slate-400 text-sm mb-1">Total Proyek</p>
+                                    <h3 class="text-3xl font-bold">45+</h3>
+                                </div>
+                                <div class="p-2 bg-blue-500/20 rounded-lg text-blue-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl border-l-4 border-purple-500">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-slate-400 text-sm mb-1">Tahun Pengalaman</p>
+                                    <h3 class="text-3xl font-bold">5 Tahun</h3>
+                                </div>
+                                <div class="p-2 bg-purple-500/20 rounded-lg text-purple-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl border-l-4 border-green-500 col-span-1 sm:col-span-2 md:col-span-1">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-slate-400 text-sm mb-1">Klien Puas</p>
+                                    <h3 class="text-3xl font-bold">30+</h3>
+                                </div>
+                                <div class="p-2 bg-green-500/20 rounded-lg text-green-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" x2="20" y1="8" y2="14"/><line x1="23" x2="17" y1="11" y2="11"/></svg></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="tentang" class="space-y-6 scroll-mt-24">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                        <h2 class="text-2xl font-bold text-slate-200">Tentang Saya</h2>
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                    </div>
+                    
+                    <div class="glass-card p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/3">
+                            <div class="aspect-square rounded-2xl bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden group">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" alt="Avatar" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-2/3 space-y-4">
+                            <h3 class="text-2xl font-semibold text-white">Developing With Passion</h3>
+                            <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                                Saya adalah pengembang web yang berdomisili di Jakarta dengan ketertarikan mendalam pada teknologi modern. Saya percaya bahwa desain yang baik bukan hanya tentang bagaimana sesuatu terlihat, tetapi bagaimana ia bekerja.
+                            </p>
+                            <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                                Di waktu luang, saya suka bereksperimen dengan IoT, bermain game simulasi strategi, dan berkontribusi pada proyek open source.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                                <div class="p-3 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                                    <span class="text-xs text-slate-500 block">Lokasi</span>
+                                    <span class="text-sm font-medium">Jakarta, Indonesia</span>
+                                </div>
+                                <div class="p-3 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                                    <span class="text-xs text-slate-500 block">Email</span>
+                                    <span class="text-sm font-medium break-all">alex@portfolio.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="pendidikan" class="space-y-6 scroll-mt-24">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                        <h2 class="text-2xl font-bold text-slate-200">Pendidikan</h2>
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="glass-card p-6 rounded-xl flex flex-col sm:flex-row gap-4 group hover:bg-slate-800/80 transition-all">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-12 h-12 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">Universitas Teknologi Digital</h3>
+                                <p class="text-slate-400">Sarjana Teknik Informatika</p>
+                                <div class="flex items-center gap-2 mt-2 text-xs text-slate-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    2019 - 2023
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-xl flex flex-col sm:flex-row gap-4 group hover:bg-slate-800/80 transition-all">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-12 h-12 rounded-full bg-slate-700/50 text-slate-400 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">SMA Negeri 1 Jakarta</h3>
+                                <p class="text-slate-400">Jurusan IPA</p>
+                                <div class="flex items-center gap-2 mt-2 text-xs text-slate-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    2016 - 2019
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="pengalaman" class="space-y-6 scroll-mt-24">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                        <h2 class="text-2xl font-bold text-slate-200">Pengalaman</h2>
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                    </div>
+
+                    <div class="relative border-l border-slate-700/50 ml-6 space-y-8">
+                        <div class="relative pl-8">
+                            <span class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-900"></span>
+                            <div class="glass-card p-6 rounded-xl hover:border-blue-500/50 transition-all">
+                                <span class="text-xs font-semibold text-blue-400 mb-1 block">2023 - Sekarang</span>
+                                <h3 class="text-xl font-bold mb-1">Senior Frontend Developer</h3>
+                                <p class="text-sm text-slate-400 mb-3">Tech Solution Inc.</p>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Bertanggung jawab atas arsitektur frontend menggunakan React.js dan Tailwind CSS. Mengelola tim yang terdiri dari 3 junior developer dan meningkatkan performa website sebesar 40%.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8">
+                            <span class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-purple-500 border-4 border-slate-900"></span>
+                            <div class="glass-card p-6 rounded-xl hover:border-purple-500/50 transition-all">
+                                <span class="text-xs font-semibold text-purple-400 mb-1 block">2021 - 2023</span>
+                                <h3 class="text-xl font-bold mb-1">Web Designer</h3>
+                                <p class="text-sm text-slate-400 mb-3">Creative Studio Agency</p>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Merancang antarmuka pengguna (UI) untuk klien internasional. Fokus pada desain responsif dan interaktif menggunakan Figma dan Webflow.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="keahlian" class="space-y-6 scroll-mt-24">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                        <h2 class="text-2xl font-bold text-slate-200">Keahlian</h2>
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="glass-card p-6 rounded-xl">
+                            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                Technical Skills
+                            </h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>HTML/CSS/Tailwind</span>
+                                        <span class="text-blue-400">95%</span>
+                                    </div>
+                                    <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[95%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>JavaScript/React</span>
+                                        <span class="text-blue-400">85%</span>
+                                    </div>
+                                    <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[85%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>PHP/Laravel</span>
+                                        <span class="text-blue-400">70%</span>
+                                    </div>
+                                    <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[70%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-xl">
+                            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                Tools & Lainnya
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full bg-slate-700/50 border border-slate-600 text-sm">Git & GitHub</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-700/50 border border-slate-600 text-sm">Figma</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-700/50 border border-slate-600 text-sm">VS Code</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-700/50 border border-slate-600 text-sm">Postman</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-700/50 border border-slate-600 text-sm">Agile/Scrum</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-700/50 border border-slate-600 text-sm">Problem Solving</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-700/50 border border-slate-600 text-sm">English (B2)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="kontak" class="space-y-6 scroll-mt-24">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                        <h2 class="text-2xl font-bold text-slate-200">Hubungi Saya</h2>
+                        <div class="h-px bg-slate-700 flex-1"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <p class="text-slate-400">
+                                Tertarik untuk bekerja sama atau sekadar ingin menyapa? Jangan ragu untuk mengirimkan pesan. Saya selalu terbuka untuk mendiskusikan proyek baru.
+                            </p>
+                            
+                            <div class="glass-card p-4 rounded-lg flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h4 class="font-semibold text-white">Telepon</h4>
+                                    <p class="text-sm text-slate-400 truncate">+62 812 3456 7890</p>
+                                </div>
+                            </div>
+
+                            <div class="glass-card p-4 rounded-lg flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h4 class="font-semibold text-white">Email</h4>
+                                    <p class="text-sm text-slate-400 truncate">contact@alexdesigner.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="glass-card p-6 rounded-xl space-y-4 border border-slate-700/50">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-1">Nama</label>
+                                <input type="text" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-1">Email</label>
+                                <input type="email" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="email@contoh.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-1">Pesan</label>
+                                <textarea rows="4" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Tulis pesan Anda disini..."></textarea>
+                            </div>
+                            <button type="button" class="w-full py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold hover:shadow-lg hover:shadow-purple-500/30 transition-all">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <footer class="text-center text-slate-500 text-sm py-8 border-t border-slate-800">
+                    <p>&copy; 2024 Alex Portfolio. All rights reserved.</p>
+                </footer>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openBtn = document.getElementById('open-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            // Sedikit delay agar transisi CSS berjalan (dari hidden ke opacity change)
+            setTimeout(() => {
+                mobileMenu.classList.remove('mobile-menu-hidden');
+                mobileMenu.classList.add('mobile-menu-visible');
+            }, 10);
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove('mobile-menu-visible');
+            mobileMenu.classList.add('mobile-menu-hidden');
+            // Menunggu transisi selesai sebelum menambahkan class hidden
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        openBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        // Tutup menu otomatis saat link diklik
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
 </body>
 </html>
